@@ -1,0 +1,12 @@
+Description: Pattern with packages for toco configurations
+Name: jolla-configuration-toco
+Requires:
+- patterns-sailfish-device-configuration-toco
+
+Summary: Jolla Configuration toco
+Description: Pattern with packages for toco configurations
+Name: jolla-configuration-toco
+Requires:
+- patterns-sailfish-device-configuration-toco
+
+Summary: Jolla Configuration toco
