@@ -1,0 +1,13 @@
+[Unit]
+Description=Overlay /usr/libexec/droid-hal/system over /system
+After=system.mount
+DefaultDependencies=no
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/usr/bin/droid/mounts_and_binds.sh
+
+[Install]
+WantedBy=local-fs.target
+ 

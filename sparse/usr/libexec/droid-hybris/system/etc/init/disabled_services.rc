@@ -1,0 +1,47 @@
+service netd netd_HYBRIS_DISABLED
+
+service installd installd_HYBRIS_DISABLED
+
+service cameraserver cameraserver_HYBRIS_DISABLED
+
+# Needs to start after pulseaudio
+# disabled. No proximity sensor in this model. See https://www.gsmarena.com/compare.php3?idPhone1=10183&idPhone2=9936
+service audioserver /system/bin/audioserver_HYBRIS_DISABLED
+    disabled
+    override
+
+service media mediaserver_HYBRIS_DISABLED
+
+service update_engine update_engine_HYBRIS_DISABLED
+
+# needs to start before pulseaudio
+# disabled. No proximity sensor in this model. See https://www.gsmarena.com/compare.php3?idPhone1=10183&idPhone2=9936
+service vendor.audio-hal-2-0 /vendor/bin/hw/android.hardware.audio@2.0-service_HYBRIS_DISABLED
+     override
+
+service lmkd /system/bin/lmkd_HYBRIS_DISABLED
+
+# Lipstick doesnt start without this?
+#service vold /system/bin/vold_HYBRIS_DISABLED
+
+service wificond /system/bin/wificond_HYBRIS_DISABLED
+
+service storaged /system/bin/storaged_HYBRIS_DISABLED
+
+service surfaceflinger surfaceflinger_HYBRIS_DISABLED
+
+service bootanim /system/bin/bootanimation_HYBRIS_DISABLED
+
+service vendor.usb-hal-1-0 /vendor/bin/hw/android.hardware.usb@1.0-service
+
+service vendor.vibrator-1-0 /vendor/bin/hw/android.hardware.vibrator@1.0-service_HYBRIS_DISABLED
+
+#logcat noise
+service vendor.drm-clearkey-hal-1-2 /vendor/bin/hw/android.hardware.drm@1.2-service.clearkey_HYBRIS_DISABLED
+    override
+
+service loc_launcher /system/vendor/bin/loc_launcher_HYBRIS_DISABLED
+    override
+
+service thermal-engine /system/vendor/bin/thermal-engine_HYBRIS_DISABLED
+    override
